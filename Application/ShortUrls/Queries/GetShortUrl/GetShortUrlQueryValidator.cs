@@ -1,0 +1,1 @@
+using FluentValidation;namespace Application.ShortUrls.Queries.GetShortUrl;public class GetShortUrlQueryValidator : AbstractValidator<GetShortUrlQuery>{    public GetShortUrlQueryValidator()    {        RuleFor(getShortUrlQuery => getShortUrlQuery.Path).NotEmpty();        RuleFor(getShortUrlQuery => getShortUrlQuery.Path).Matches(@"^[a-zA-Z0-9_-]*$");    }}

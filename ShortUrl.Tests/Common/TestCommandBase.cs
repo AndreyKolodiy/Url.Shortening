@@ -1,0 +1,1 @@
+using Infrastructure;namespace ShortUrl.Tests.Common;public abstract class TestCommandBase : IDisposable{    protected readonly ShortUrlDbContext Context;    public TestCommandBase()    {        Context = ShortUrlContextFactory.Create();    }    public void Dispose()    {        ShortUrlContextFactory.Destroy(Context);    }}

@@ -1,0 +1,1 @@
+namespace Infrastructure;public class DbInitializer{    public static void Initialize(ShortUrlDbContext context)    {        context.Database.EnsureCreated();    }}

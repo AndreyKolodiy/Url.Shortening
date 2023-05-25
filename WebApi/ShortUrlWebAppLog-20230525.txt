@@ -1,0 +1,255 @@
+2023-05-25 23:08:17.211 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-05-25 23:08:17.305 +03:00 [INF] Now listening on: http://localhost:5086
+2023-05-25 23:08:17.306 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-25 23:08:17.306 +03:00 [INF] Hosting environment: Development
+2023-05-25 23:08:17.306 +03:00 [INF] Content root path: /Users/andriikolodii/RiderProjects/Url.Shortening/WebApi
+2023-05-25 23:08:18.083 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/ - -
+2023-05-25 23:08:18.099 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/ - - - 404 0 - 17.8644ms
+2023-05-25 23:08:39.559 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:08:39.566 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:08:39.574 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:08:39.642 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:08:39.811 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:08:39.823 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:08:39.840 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 263.3312ms
+2023-05-25 23:08:39.840 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:08:39.842 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 283.2151ms
+2023-05-25 23:09:03.039 +03:00 [INF] Application is shutting down...
+2023-05-25 23:23:08.421 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2023-05-25 23:23:08.505 +03:00 [INF] Now listening on: http://localhost:5086
+2023-05-25 23:23:08.506 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-05-25 23:23:08.506 +03:00 [INF] Hosting environment: Development
+2023-05-25 23:23:08.506 +03:00 [INF] Content root path: /Users/andriikolodii/RiderProjects/Url.Shortening/WebApi
+2023-05-25 23:23:09.361 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/ - -
+2023-05-25 23:23:09.396 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/ - - - 404 0 - 35.7226ms
+2023-05-25 23:23:23.268 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/google - -
+2023-05-25 23:23:23.274 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Delete (WebApi)'
+2023-05-25 23:23:23.289 +03:00 [INF] Route matched with {action = "Delete", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.DeleteShortUrl.DeleteShortUrlCommand]] Delete(System.String) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:23:23.367 +03:00 [INF] ShortUrl Request: DeleteShortUrlCommand {"Path":"google","$type":"DeleteShortUrlCommand"}
+2023-05-25 23:23:23.578 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__p_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Path", "s"."Destination"
+FROM "ShortUrls" AS "s"
+WHERE "s"."Path" = @__p_0
+LIMIT 1
+2023-05-25 23:23:23.662 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "ShortUrls"
+WHERE "Path" = @p0
+RETURNING 1;
+2023-05-25 23:23:23.670 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-25 23:23:23.672 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Delete (WebApi) in 381.4834ms
+2023-05-25 23:23:23.672 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Delete (WebApi)'
+2023-05-25 23:23:23.674 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/google - - - 204 - - 406.1337ms
+2023-05-25 23:23:26.695 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:23:26.697 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:23:26.700 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:23:26.719 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:23:26.791 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:23:26.794 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:23:26.809 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 108.9566ms
+2023-05-25 23:23:26.810 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:23:26.810 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 114.8379ms
+2023-05-25 23:23:38.744 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/youtube - -
+2023-05-25 23:23:38.744 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Delete (WebApi)'
+2023-05-25 23:23:38.744 +03:00 [INF] Route matched with {action = "Delete", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.DeleteShortUrl.DeleteShortUrlCommand]] Delete(System.String) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:23:38.747 +03:00 [INF] ShortUrl Request: DeleteShortUrlCommand {"Path":"youtube","$type":"DeleteShortUrlCommand"}
+2023-05-25 23:23:38.756 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Path", "s"."Destination"
+FROM "ShortUrls" AS "s"
+WHERE "s"."Path" = @__p_0
+LIMIT 1
+2023-05-25 23:23:38.759 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "ShortUrls"
+WHERE "Path" = @p0
+RETURNING 1;
+2023-05-25 23:23:38.763 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-25 23:23:38.763 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Delete (WebApi) in 18.4777ms
+2023-05-25 23:23:38.763 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Delete (WebApi)'
+2023-05-25 23:23:38.763 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/youtube - - - 204 - - 19.5923ms
+2023-05-25 23:23:41.091 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:23:41.091 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:23:41.091 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:23:41.093 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:23:41.099 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:23:41.100 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:23:41.101 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 9.3993ms
+2023-05-25 23:23:41.101 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:23:41.101 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 10.4304ms
+2023-05-25 23:23:51.933 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 205
+2023-05-25 23:23:51.933 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:23:51.938 +03:00 [INF] Route matched with {action = "Create", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.CreateShortUrl.CreateShortUrlCommand]] Create(WebApi.Models.CreateShortUrlDto) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:23:52.010 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Create (WebApi) in 71.4951ms
+2023-05-25 23:23:52.010 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:23:52.021 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 205 - 400 - application/json 88.1176ms
+2023-05-25 23:24:11.076 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 211
+2023-05-25 23:24:11.076 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:24:11.076 +03:00 [INF] Route matched with {action = "Create", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.CreateShortUrl.CreateShortUrlCommand]] Create(WebApi.Models.CreateShortUrlDto) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:24:11.080 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Create (WebApi) in 3.9895ms
+2023-05-25 23:24:11.080 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:24:11.081 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 211 - 400 - application/json 5.1419ms
+2023-05-25 23:24:31.123 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 212
+2023-05-25 23:24:31.123 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:24:31.124 +03:00 [INF] Route matched with {action = "Create", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.CreateShortUrl.CreateShortUrlCommand]] Create(WebApi.Models.CreateShortUrlDto) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:24:31.127 +03:00 [INF] ShortUrl Request: CreateShortUrlCommand {"Destination":"https://www.google.com/search?q=youtube&oq=you&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j69i57j0i131i433i512l2j69i65l3.1368j0j7&sourceid=chrome&ie=UTF-8","Path":"youtube","$type":"CreateShortUrlCommand"}
+2023-05-25 23:24:31.162 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 7), @p1='?' (Size = 164)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ShortUrls" ("Path", "Destination")
+VALUES (@p0, @p1);
+2023-05-25 23:24:31.163 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-25 23:24:31.163 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Create (WebApi) in 39.321ms
+2023-05-25 23:24:31.163 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:24:31.163 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 212 - 204 - - 40.1015ms
+2023-05-25 23:24:34.467 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:24:34.468 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:24:34.468 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:24:34.470 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:24:34.473 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:24:34.473 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:24:34.473 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 5.3665ms
+2023-05-25 23:24:34.473 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:24:34.474 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 6.3805ms
+2023-05-25 23:24:43.371 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 214
+2023-05-25 23:24:43.371 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:24:43.371 +03:00 [INF] Route matched with {action = "Create", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.CreateShortUrl.CreateShortUrlCommand]] Create(WebApi.Models.CreateShortUrlDto) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:24:43.372 +03:00 [INF] ShortUrl Request: CreateShortUrlCommand {"Destination":"https://www.google.com/search?q=youtube&oq=you&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j69i57j0i131i433i512l2j69i65l3.1368j0j7&sourceid=chrome&ie=UTF-8","Path":"you--tube","$type":"CreateShortUrlCommand"}
+2023-05-25 23:24:43.375 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 9), @p1='?' (Size = 164)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ShortUrls" ("Path", "Destination")
+VALUES (@p0, @p1);
+2023-05-25 23:24:43.376 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-25 23:24:43.376 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Create (WebApi) in 4.4457ms
+2023-05-25 23:24:43.376 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:24:43.376 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 214 - 204 - - 5.0549ms
+2023-05-25 23:24:46.439 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:24:46.439 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:24:46.439 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:24:46.439 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:24:46.440 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:24:46.441 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:24:46.441 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 2.0261ms
+2023-05-25 23:24:46.441 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:24:46.441 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 2.6327ms
+2023-05-25 23:24:59.498 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/you--tube - -
+2023-05-25 23:24:59.499 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/you--tube - - - 404 0 - 0.7183ms
+2023-05-25 23:25:01.948 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:25:01.949 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:25:01.949 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:25:01.949 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:25:01.951 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:25:01.952 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:25:01.952 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 3.3634ms
+2023-05-25 23:25:01.953 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:25:01.953 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 4.3125ms
+2023-05-25 23:25:28.576 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/you--tube - -
+2023-05-25 23:25:28.578 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/you--tube - - - 404 0 - 1.2501ms
+2023-05-25 23:25:42.404 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:25:42.406 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:25:42.406 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:25:42.406 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:25:42.410 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:25:42.411 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:25:42.412 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 5.8727ms
+2023-05-25 23:25:42.412 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:25:42.412 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 7.5911ms
+2023-05-25 23:25:52.709 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/youtube - -
+2023-05-25 23:25:52.709 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Delete (WebApi)'
+2023-05-25 23:25:52.710 +03:00 [INF] Route matched with {action = "Delete", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.DeleteShortUrl.DeleteShortUrlCommand]] Delete(System.String) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:25:52.711 +03:00 [INF] ShortUrl Request: DeleteShortUrlCommand {"Path":"youtube","$type":"DeleteShortUrlCommand"}
+2023-05-25 23:25:52.714 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Path", "s"."Destination"
+FROM "ShortUrls" AS "s"
+WHERE "s"."Path" = @__p_0
+LIMIT 1
+2023-05-25 23:25:52.715 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@p0='?' (Size = 7)], CommandType='"Text"', CommandTimeout='30']
+DELETE FROM "ShortUrls"
+WHERE "Path" = @p0
+RETURNING 1;
+2023-05-25 23:25:52.716 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2023-05-25 23:25:52.717 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Delete (WebApi) in 6.9105ms
+2023-05-25 23:25:52.717 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Delete (WebApi)'
+2023-05-25 23:25:52.717 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/youtube - - - 204 - - 7.6166ms
+2023-05-25 23:25:55.685 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:25:55.685 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:25:55.685 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:25:55.686 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:25:55.687 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:25:55.688 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:25:55.689 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 2.9984ms
+2023-05-25 23:25:55.689 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:25:55.689 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 3.8553ms
+2023-05-25 23:26:58.459 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/you--tube - -
+2023-05-25 23:26:58.463 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5086/api/shortUrl/you--tube - - - 404 0 - 4.6751ms
+2023-05-25 23:27:02.983 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 214
+2023-05-25 23:27:02.984 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:27:02.984 +03:00 [INF] Route matched with {action = "Create", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Commands.CreateShortUrl.CreateShortUrlCommand]] Create(WebApi.Models.CreateShortUrlDto) on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:27:02.988 +03:00 [INF] ShortUrl Request: CreateShortUrlCommand {"Destination":"https://www.google.com/search?q=youtube&oq=you&aqs=chrome.0.0i131i355i433i512j46i131i199i433i465i512j69i57j0i131i433i512l2j69i65l3.1368j0j7&sourceid=chrome&ie=UTF-8","Path":"you--tube","$type":"CreateShortUrlCommand"}
+2023-05-25 23:27:03.007 +03:00 [ERR] Failed executing DbCommand (8ms) [Parameters=[@p0='?' (Size = 9), @p1='?' (Size = 164)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ShortUrls" ("Path", "Destination")
+VALUES (@p0, @p1);
+2023-05-25 23:27:03.028 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'Infrastructure.ShortUrlDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: ShortUrls.Path'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.Sqlite.SqliteException (0x80004005): SQLite Error 19: 'UNIQUE constraint failed: ShortUrls.Path'.
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-05-25 23:27:03.030 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.Create (WebApi) in 45.8766ms
+2023-05-25 23:27:03.031 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.Create (WebApi)'
+2023-05-25 23:27:03.033 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/api/shortUrl application/json 214 - 500 - application/json 49.6340ms
+2023-05-25 23:30:25.193 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/api/shortUrl - -
+2023-05-25 23:30:25.195 +03:00 [INF] Executing endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:30:25.196 +03:00 [INF] Route matched with {action = "GetAll", controller = "ShortUrl"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto]] GetAll() on controller WebApi.Controllers.ShortUrlController (WebApi).
+2023-05-25 23:30:25.197 +03:00 [INF] ShortUrl Request: GetShortUrlListQuery {"$type":"GetShortUrlListQuery"}
+2023-05-25 23:30:25.203 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Destination", "s"."Path"
+FROM "ShortUrls" AS "s"
+2023-05-25 23:30:25.204 +03:00 [INF] Executing OkObjectResult, writing value of type 'Application.ShortUrls.Queries.GetShortUrlList.ShortUrlListDto'.
+2023-05-25 23:30:25.205 +03:00 [INF] Executed action WebApi.Controllers.ShortUrlController.GetAll (WebApi) in 8.9639ms
+2023-05-25 23:30:25.205 +03:00 [INF] Executed endpoint 'WebApi.Controllers.ShortUrlController.GetAll (WebApi)'
+2023-05-25 23:30:25.206 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/api/shortUrl - - - 200 - application/json;+charset=utf-8 12.7063ms
+2023-05-25 23:30:32.816 +03:00 [INF] Application is shutting down...

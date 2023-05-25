@@ -1,0 +1,1 @@
+using MediatR;namespace Application.ShortUrls.Commands.UpdateShortUrl;public class UpdateShortUrlCommand : IRequest{    public string Destination { get; set; }    public string Path { get; set; }}

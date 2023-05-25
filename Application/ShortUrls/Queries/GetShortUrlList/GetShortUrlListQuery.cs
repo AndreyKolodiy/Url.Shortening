@@ -1,0 +1,1 @@
+using MediatR;namespace Application.ShortUrls.Queries.GetShortUrlList;public class GetShortUrlListQuery : IRequest<ShortUrlListDto>{    }

@@ -1,0 +1,1 @@
+using MediatR;namespace Application.ShortUrls.Commands.DeleteShortUrl;public class DeleteShortUrlCommand : IRequest{    public string Path { get; set; }}
