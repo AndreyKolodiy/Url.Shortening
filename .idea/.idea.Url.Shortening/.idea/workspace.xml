@@ -8,65 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d85a33ef-b767-498e-9045-559612816c54" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Application.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Common/Behaviors/LoggingBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Common/Behaviors/ValidationBehavior.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Common/Exceptions/NotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Common/Mappings/AssemblyMappingProfile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Common/Mappings/IMapWith.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/Interfaces/IShortUrlDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/CreateShortUrl/CreateShortUrlCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/CreateShortUrl/CreateShortUrlCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/CreateShortUrl/CreateShortUrlCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/DeleteShortUrl/DeleteShortUrlCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/DeleteShortUrl/DeleteShortUrlCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/DeleteShortUrl/DeleteShortUrlCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/UpdateShortUrl/UpdateShortUrlCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/UpdateShortUrl/UpdateShortUrlCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Commands/UpdateShortUrl/UpdateShortUrlCommandValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrl/GetShortUrlQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrl/GetShortUrlQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrl/GetShortUrlQueryValidator.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrl/ShortUrlDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrlList/GetShortUrlListQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrlList/GetShortUrlListQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrlList/ShortUrlListDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Application/ShortUrls/Queries/GetShortUrlList/ShortUrlLookupDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/Domain.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Domain/ShortUrl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/DbInitializer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/EntityTypeConfigurations/ShortUrlConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/Infrastructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Infrastructure/ShortUrlDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/Common/QueryTestFixture.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/Common/ShortUrlContextFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/Common/TestCommandBase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/ShortUrl.Tests.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/ShortsUrl/Commands/CreateShortUrlCommandHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/ShortsUrl/Commands/DeleteShortUrlCommandHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/ShortsUrl/Commands/UpdateShortUrlCommandHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/ShortsUrl/Queries/GetShortUrlListQueryHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/ShortsUrl/Queries/GetShortUrlQueryHandlerTests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ShortUrl.Tests/Usings.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Url.Shortening.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Controllers/BaseController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Controllers/ShortUrlController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Middleware/CustomExceptionHandlerMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Middleware/CustomExceptionHandlerMiddlewareExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Models/CreateShortUrlDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Models/UpdateShortUrlDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/WebApi.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebApi/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="d85a33ef-b767-498e-9045-559612816c54" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,6 +106,7 @@
       <updated>1684942198328</updated>
       <workItem from="1684942199439" duration="611000" />
       <workItem from="1685021841651" duration="24722000" />
+      <workItem from="1685052014703" duration="421000" />
     </task>
     <servers />
   </component>
